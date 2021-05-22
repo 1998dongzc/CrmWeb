@@ -86,7 +86,7 @@
     data() {
       return {
         localInfo: JSON.parse(getUserInfo()),
-        bigTab: window.innerWidth * 0.15,
+        bigTab: window.innerWidth * 0.13,
         maxHeight: window.innerHeight * 0.95,
         userlist: []
       }

@@ -50,7 +50,7 @@
 </template>
 
 <script>
-  import {getUserInfo, isLogin, logout} from "../../utils/localStauts";
+  import {getUserInfo, logout, setUserInfo} from "../../utils/localStauts";
   import {getUser, updateInfo, updateUser} from "../../api/user";
 
   export default {
@@ -133,6 +133,7 @@
         this.infoLoading=true
         updateInfo(this.userInfo).then(res=>{
           this.infoLoading=false
+          setUserInfo(JSON.stringify(this.userInfo))
           this.$message({
             type: 'success',
             message: res.message,
