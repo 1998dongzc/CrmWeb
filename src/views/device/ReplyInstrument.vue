@@ -1,7 +1,8 @@
 <template>
   <el-table
-    :header-cell-style="{background:'#909399',color:'white'}"
+    :header-cell-style="{background:'black',color:'white'}"
     :data="applys"
+    border
     style="width: 100%"
     height="100%">
     <el-table-column
@@ -35,7 +36,7 @@
       label="数量">
     </el-table-column>
     <el-table-column
-      :width="tblWitdh"
+      :width="opsWitdh"
       label="操作">
       <template slot-scope="scope">
         <el-button type="success" @click.native="agree(scope.row)" v-prevent-click>同意</el-button>
@@ -55,7 +56,8 @@
     name: "ReplyInstrument",
     data() {
       return {
-        tblWitdh: window.innerWidth * 0.135,
+        tblWitdh: window.innerWidth * 0.12,
+        opsWitdh: window.innerWidth * 19,
         applys: [],
       }
     },
