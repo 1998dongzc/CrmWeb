@@ -21,6 +21,11 @@
       :width="bigTab">
     </el-table-column>
     <el-table-column
+      prop="department"
+      label="院系"
+      :width="bigTab">
+    </el-table-column>
+    <el-table-column
       prop="role"
       label="权限"
       :width="bigTab">
